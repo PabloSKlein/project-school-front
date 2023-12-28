@@ -1,0 +1,65 @@
+<body>
+    <div class="mx-auto relative">
+        <div class="h-full">
+            <div class="card flex justify-content-center">
+                <p-table [value]="persons" styleClass="p-datatable-gridlines p-datatable-striped">
+                    <ng-template pTemplate="caption">
+                        <div class="captionflex">
+                            <a class="text-xl">Persons</a>
+                            <p-button icon="pi pi-plus" label="New"/>
+                        </div>
+                    </ng-template>
+                    <ng-template id="table-header" pTemplate="header">
+                        <tr>
+                            <th id="id-header" style="text-align: center;">
+                                Id
+                            </th>
+                            <th id="name-header" style="text-align: center;">
+                                Name
+                            </th>
+                            <th id="birthdate-header" style="text-align: center;">
+                                Birth Date
+                            </th>
+                            <th id="documenttype-header" style="text-align: center;">
+                                Document Type
+                            </th>
+                            <th id="documentnumber-header" style="text-align: center;">
+                                Document
+                            </th>
+                            <th id="actions-header" style="text-align: center;">
+                                Actions
+                            </th>
+
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-rowData>
+                        <tr>
+                            <th id="id-row">
+                                {{rowData.personId}}
+                            </th>
+                            <th id="name-row">
+                                {{rowData.name}}
+                            </th>
+                            <th id="birthdate-row">
+                                {{rowData.birthDate}}
+                            </th>
+                            <th id="documenttype-row">
+                                {{rowData.documentType}}
+                            </th>
+                            <th id="documentnumber-row">
+                                {{rowData.documentNumber}}
+                            </th>
+                            <th id="action-row">
+                                <span class="p-buttonset">
+                                    <p-button icon="pi pi-pencil" label="Edit" />
+                                    <p-button icon="pi pi-times" label="Delete" />
+                                </span>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template id="table-footer" pTemplate="summary">Footer</ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</body>

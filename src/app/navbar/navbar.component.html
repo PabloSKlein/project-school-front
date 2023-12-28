@@ -1,0 +1,10 @@
+<header class="navbar">
+    <div class="navbar-start">
+        <p-menu #menu [model]="items" [popup]="true" />
+        <p-button type="button" (click)="menu.toggle($event)" icon="pi pi-bars" />
+    </div>
+    <div class="navbar-center">
+        <a class="normal-case text-xl">Project School</a>
+    </div>
+    <div class="navbar-end"></div>
+</header>
